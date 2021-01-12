@@ -1,9 +1,18 @@
-*{
-   
+* {
     box-sizing: border-box;
-    background: #009FFF;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #009fff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #ec2f4b,
+        #009fff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #ec2f4b,
+        #009fff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+    padding: 0;
 }
 
 .boton-registro {
@@ -12,7 +21,7 @@
     text-align: end;
 }
 
-.form-register{
+.form-register {
     width: 400px;
     background: #24303c;
     padding: 30px;
@@ -23,22 +32,23 @@
     box-shadow: 7px 13px 37px #000;
 }
 
-.title{
+.title {
     font-size: 40px;
     color: white;
     margin: 20px 0;
     text-align: center;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic,
+        'AppleGothic', sans-serif;
     text-rendering: optimizeLegibility;
-} 
+}
 
-.form-register h4{
+.form-register h4 {
     font-size: 22px;
     margin-bottom: 20px;
     background: #24303c;
 }
 
-.controls{
+.controls {
     width: 100%;
     background: #24303c;
     padding: 10px;
@@ -49,7 +59,7 @@
     font-size: 18px;
 }
 
-.options{
+.options {
     width: 100%;
     background: #24303c;
     padding: 10px;
@@ -59,10 +69,9 @@
     font-family: 'calibri';
     font-size: 18px;
     color: white;
-    
 }
 
-.form-register .button{
+.form-register .button {
     width: 100%;
     background: #1f53c5;
     border: none;
@@ -72,26 +81,28 @@
     font-size: 16px;
 }
 
-.lista{
-    color: white;
+.row {
+    width: calc(100% + 12px);
+}
+
+.lista {
     width: 100%;
+    color: white;
+    padding: 0;
     margin-top: 50px;
 }
 
-.tabla{
+.tabla {
     text-align: center;
 }
 
-.title-register{
+.title-register {
     color: white;
     background: transparent;
 }
 
-.button-close{
+.button-close {
     padding: auto;
     color: white;
     background: transparent;
 }
-
-
-
