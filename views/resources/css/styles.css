@@ -1,0 +1,97 @@
+*{
+   
+    box-sizing: border-box;
+    background: #009FFF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.boton-registro {
+    width: 100%;
+    padding-right: 20px;
+    text-align: end;
+}
+
+.form-register{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.title{
+    font-size: 40px;
+    color: white;
+    margin: 20px 0;
+    text-align: center;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    text-rendering: optimizeLegibility;
+} 
+
+.form-register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+    background: #24303c;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+.options{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    
+}
+
+.form-register .button{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.lista{
+    color: white;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.tabla{
+    text-align: center;
+}
+
+.title-register{
+    color: white;
+    background: transparent;
+}
+
+.button-close{
+    padding: auto;
+    color: white;
+    background: transparent;
+}
+
+
+
