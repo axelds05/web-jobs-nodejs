@@ -44,16 +44,27 @@
                             <th>Correo</th>
                             <th>Sector</th>
                             <th>Experiencia</th>
+                            <th>Funciones</th>
                         </tr>
                     </thead>
                     <tbody class="lista">
-                        <tr *ngFor="let employee of employees; let i = index">
-                            <td>{{ employee.nombre }}</td>
-                            <td>{{ employee.apellido }}</td>
-                            <td>{{ employee.correo }}</td>
-                            <td>{{ employee.sector }}</td>
-                            <td>{{ employee.experiencia }}</td>
+                        <% employees.forEach(function(employee) { %>
+                        <tr>
+                            <td><%= employee.name %></td>
+                            <td><%= employee.lastname %></td>
+                            <td><%= employee.mail %></td>
+                            <td><%= employee.area %></td>
+                            <td><%= employee.experience %></td>
+                            <td>
+                                <a
+                                    href="/employee/<%= employee._id %>/delete"
+                                    class="btn btn-danger btn-sm"
+                                >
+                                    Eliminar solicitud
+                                </a>
+                            </td>
                         </tr>
+                        <% }) %>
                     </tbody>
                 </table>
             </div>
@@ -88,48 +99,67 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <section class="form-register">
+                        <form
+                            method="POST"
+                            action="/employee"
+                            class="form-register"
+                        >
                             <input
                                 class="controls"
                                 type="text"
-                                name="nombre"
+                                name="name"
                                 id="nombre"
                                 placeholder="Ingrese su Nombre"
+                                required
                             />
                             <input
                                 class="controls"
                                 type="text"
-                                name="apellido"
+                                name="lastname"
                                 id="apellido"
                                 placeholder="Ingrese su Apellido"
+                                required
                             />
                             <input
                                 class="controls"
                                 type="email"
-                                name="correo"
+                                name="mail"
                                 id="correo"
                                 placeholder="Ingrese su Correo"
+                                required
                             />
-                            <select name="Dev Type" class="options">
-                                <option>Seleccionar sector</option>
-                                <option>Desarrollador Front-End</option>
-                                <option>Desarrollador Back-End</option>
-                                <option>Desarrollador FullStack</option>
-                                <option>Desarrollador Movil</option>
+                            <label for="area">Seleccionar Sector</label>
+                            <select name="area" class="options" required>
+                                <option value="Desarrollador Front-End">
+                                    Desarrollador Front-End
+                                </option>
+                                <option value="Desarrollador Back-End">
+                                    Desarrollador Back-End
+                                </option>
+                                <option value="Desarrollador FullStack">
+                                    Desarrollador FullStack
+                                </option>
+                                <option value="Desarrollador Mobile">
+                                    Desarrollador Mobile
+                                </option>
                             </select>
-                            <select name="Dev Experience" class="options">
-                                <option>Seleccionar experiencia</option>
-                                <option>Sin experiencia</option>
-                                <option>Junior</option>
-                                <option>Semi Senior</option>
-                                <option>Senior</option>
+                            <label for="experience">
+                                Seleccionar experiencia
+                            </label>
+                            <select name="experience" class="options" required>
+                                <option value="Sin experiencia">
+                                    Sin experiencia
+                                </option>
+                                <option value="Junior">Junior</option>
+                                <option value="Semi Senior">Semi Senior</option>
+                                <option value="Senior">Senior</option>
                             </select>
                             <input
                                 class="button"
                                 type="submit"
                                 value="Agregar a la lista de empleos"
                             />
-                        </section>
+                        </form>
                     </div>
                 </div>
             </div>

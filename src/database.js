@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
 
-const URI = process.env.MONGOOSE_URI
-    ? process.env.MONGOOSE_URI
-    : 'mongodb://localhost/employees'
-    
+const URI = 'mongodb://localhost/web-jobs-nodejs'
+
 mongoose.connect(URI, {
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useUnifiedTopology: true
 })
 
 const connection = mongoose.connection
